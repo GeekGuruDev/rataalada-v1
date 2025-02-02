@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: black;
+    font-family: Source Code Pro, monospace;
+    color: #e5e5e5;
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 0.06em;
+  }
+  .grainy::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.08;
+    background: url(/src/assets/grain.gif);
+  }
+
+  .terminal {
+    line-height: 1.5rem;
+    color: #25ff00;
+    text-shadow: 0 0 2px rgba(203, 254, 182, 0.7);
+    min-height: 100vh;
+    position: relative;
+    white-space: pre-wrap;
+  }
+
+  .cursor {
+    animation: 1.2s ease 0s infinite normal none running cursor;
+  }
+
+  @media (min-width: 768px) {
+    .terminal {
+      font-size: 1.5em;
+      line-height: 2.5rem;
+    }
+  }
+
+  @keyframes cursor {
+    0% {
+      opacity: 0;
+    }
+    60% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    81% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes flash {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
