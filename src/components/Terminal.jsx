@@ -181,7 +181,7 @@ function Terminal() {
     textHistory.at(-1)?.toUpperCase() === endTexts.at(-1)?.toUpperCase();
 
   return (
-    <div className="terminal p-[1rem] md:p-[2rem] pb-[50vh] md:pb-[20vh] xl:pr-12">
+    <div className="terminal p-[1rem] md:p-[2rem] pb-[50vh] md:pb-[5vh] xl:pr-12">
       {textHistory.map((text, index) => (
         <div className="flex" key={index}>
           <span>&gt;&gt;&nbsp;</span>
