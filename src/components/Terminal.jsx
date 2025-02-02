@@ -144,6 +144,15 @@ function Terminal() {
   const [isTyping, setIsTyping] = useState(true);
 
   const inputRef = useRef(null);
+  const endRef = useRef(null);
+
+  const scrollToBottom = () => {
+    endRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [textHistory]);
 
   const handleBlur = () => {
     if (inputRef.current) {
@@ -172,7 +181,7 @@ function Terminal() {
     textHistory.at(-1)?.toUpperCase() === endTexts.at(-1)?.toUpperCase();
 
   return (
-    <div className="terminal p-[2rem] md:p-[3rem]">
+    <div className="terminal p-[1rem] md:p-[2rem] pb-[50vh] md:pb-[20vh] xl:pr-12">
       {textHistory.map((text, index) => (
         <div className="flex" key={index}>
           <span>&gt;&gt;&nbsp;</span>
@@ -204,19 +213,21 @@ function Terminal() {
       )}
 
       {!isEnded && (
-        <form className="opacity-0" onSubmit={handleAnswer}>
+        <form className="opacity-0 " onSubmit={handleAnswer}>
           <input
             type="text"
             value={inputVal}
             ref={inputRef}
             disabled={isTyping}
             onBlur={handleBlur}
+            placeholder=""
             onChange={(e) => {
               dispatch({ type: "INPUT", payload: e.target.value });
             }}
           />
         </form>
       )}
+      <div ref={endRef} />
     </div>
   );
 }

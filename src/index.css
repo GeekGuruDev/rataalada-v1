@@ -27,6 +27,7 @@
     color: #25ff00;
     text-shadow: 0 0 2px rgba(203, 254, 182, 0.7);
     white-space: pre-wrap;
+    padding-bottom: 50vh;
   }
 
   .cursor {
