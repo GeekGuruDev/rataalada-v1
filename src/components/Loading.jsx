@@ -12,7 +12,7 @@ function Loading({ setIsLoading }) {
     if (showImg) {
       const interval = setTimeout(() => {
         setIsLoading(false);
-      }, 1500);
+      }, 200);
       return () => clearInterval(interval);
     }
 
