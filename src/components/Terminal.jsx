@@ -149,7 +149,7 @@ function Terminal() {
     textHistory.at(-1)?.toUpperCase() === endTexts.at(-1)?.toUpperCase();
 
   return (
-    <div className="terminal p-[1rem] md:p-[2rem] pb-[50vh] md:pb-[70vh] xl:pr-12">
+    <div className="terminal p-[1rem] md:p-[2rem] pb-[50vh] md:pb-[10vh] xl:pr-12">
       {textHistory.map((text, index) => (
         <div className="flex" key={index}>
           <span>&gt;&gt;&nbsp;</span>
@@ -181,20 +181,22 @@ function Terminal() {
       )}
 
       {!isEnded && (
-        <form className="opacity-0 " onSubmit={handleAnswer}>
+        <form onSubmit={handleAnswer}>
           <input
             type="text"
             value={inputVal}
+            placeholder={isTyping ? "" : "Tap here to type"}
             ref={inputRef}
             disabled={isTyping}
+            className="outline-none caret-transparent text-transparent lg:opacity-0 placeholder:opacity-50"
             onBlur={handleBlur}
-            placeholder=""
             onChange={(e) => {
               dispatch({ type: "INPUT", payload: e.target.value });
             }}
           />
         </form>
       )}
+      {isEnded && <input type="text" className="opacity-0" disabled />}
       <div ref={endRef} />
     </div>
   );
