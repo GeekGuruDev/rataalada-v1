@@ -50,7 +50,8 @@ function reducer(state, action) {
     }
     case "ANSWRED":
       if (
-        action.payload.toUpperCase() === answers[state.riddleIdx].toUpperCase()
+        action.payload.trim().toUpperCase() ===
+        answers[state.riddleIdx].toUpperCase()
       ) {
         if (state.riddleIdx === riddles.length - 1) {
           return {
@@ -149,7 +150,7 @@ function Terminal() {
     textHistory.at(-1)?.toUpperCase() === endTexts.at(-1)?.toUpperCase();
 
   return (
-    <div className="terminal p-[1rem] md:p-[2rem] pb-[50vh] md:pb-[10vh] xl:pr-12">
+    <div className="terminal p-[1rem] md:p-[2rem] pb-[50vh] md:pb-[10vh] xl:pr-[20vw]">
       {textHistory.map((text, index) => (
         <div className="flex" key={index}>
           <span>&gt;&gt;&nbsp;</span>

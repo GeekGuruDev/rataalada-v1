@@ -23,6 +23,11 @@ const answers = ["Secret", "Tomorrow", "Law"];
 const correctAnsTexts = [
   "The truth does not evade you. Try another and see what you uncover.",
   "Your intelligence knows no bounds. But here’s one you may not know.",
+  "YOU MAY HAVE GOTTEN THIS ONE, BUT ONLY I HAVE ALL THE ANSWERS. HERE'S ANOTHER.",
+  "YOU'RE QUITE THE THINKER. NOW, THINK ABOUT THIS NEXT ONE.",
+  "A CORRECT ANSWER LEADS YOU CLOASER TO FULFILLMENT. NOW, HERE'S ANOTHER RIDDLE.",
+  "YOU'RE GOOD. ON TO THE NEXT ONE.",
+  "PRECISELY. NOW LET'S SEE IF YOU HAVE WHAT IT TAKES TO CORRECTLY ANSWER ANOTHER.",
 ];
 
 const wrongAnsTexts = [
@@ -30,6 +35,8 @@ const wrongAnsTexts = [
   "Not quite - better luck then.",
   "They can't be all winners. Give it some thoughts and try again.",
   "That was a wild guess. If you want to win, you must try a little harder.",
+  "WHEN YOU GUESS WRONG, I GUESS YOU'D BETTER TRY AGAIN.",
+  "POWER HAS CORRRUPTED YOU, AND YOUR ANSWERS. THINK A LITTLE HARDER.",
 ];
 
 const endTexts = [

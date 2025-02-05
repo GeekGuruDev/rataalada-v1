@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import LoaderImg from "./LoaderImg";
 
-const status = ["Load Ram", "Trace Load", "Tracing...", "Boot Load"];
-const time = [300, 200, 500, 200];
+const status = ["", "Load Ram", "Trace Load", "Tracing...", "Boot Load"];
+const time = [20, 300, 200, 500, 200];
 
 function Loading({ setIsLoading }) {
   const [idx, setIdx] = useState(0);
