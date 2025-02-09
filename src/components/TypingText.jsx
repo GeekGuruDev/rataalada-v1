@@ -19,7 +19,7 @@ const TypingText = ({ textArr, dispatch, setIsTyping }) => {
             setLineIndex((prevIndex) => prevIndex + 1);
           }, 500);
         }
-      }, 20);
+      }, 25);
       return () => clearInterval(interval);
     } else if (lineIndex === textArr.length) {
       setIsTyping(false);

@@ -30,7 +30,7 @@ function reducer(state, action) {
           return {
             ...state,
             textHistory: [...state.textHistory, "Y"],
-            currentTexts: accepted,
+            currentTexts: [...accepted, riddles[0]],
             status: "play",
           };
         if (newValue === "N")
@@ -130,7 +130,7 @@ function Terminal() {
   };
 
   useEffect(() => {
-    if (status === "play" && textHistory.at(-1) === accepted.at(-1))
+    if (status !== "play" && textHistory.at(-1) === riddles.at(0))
       dispatch({ type: "PLAY" });
   }, [status, textHistory]);
 
