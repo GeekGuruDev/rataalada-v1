@@ -44,6 +44,7 @@ const endTexts = [
   "Let’s see what your hard work has revealed.",
   "[ CLICK FOR REWARD ]",
   "The game may be over for now, but I’m just getting started. See you next time.",
+  "You know where to find me: [ CLICK TO REACH ME ].",
 ];
 
 export {
