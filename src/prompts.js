@@ -13,12 +13,12 @@ const decline = ["Farewell. We’ll try to play another time."];
 const riddles = [
   "Riddle#1 - The more I’m revealed the less I exist",
   "Riddle#2 - I am always coming, but never arrive. What am I?",
-  "Riddle#3 - Those who make me are likely to break me.",
+  "Riddle#3 - What is broken, once you have said it?",
 ];
 
 // const riddles = riddles1.slice(0, 1);
 
-const answers = ["Secret", "Tomorrow", "Law"];
+const answers = ["Secret", "Tomorrow", "Silence"];
 
 const correctAnsTexts = [
   "The truth does not evade you. Try another and see what you uncover.",
@@ -44,7 +44,6 @@ const endTexts = [
   "Let’s see what your hard work has revealed.",
   "[ CLICK FOR REWARD ]",
   "The game may be over for now, but I’m just getting started. See you next time.",
-  "You know where to find me: [ CLICK TO REACH ME ].",
 ];
 
 export {
