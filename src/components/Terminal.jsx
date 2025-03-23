@@ -155,7 +155,7 @@ function Terminal() {
         <div className="flex" key={index}>
           <span>&gt;&gt;&nbsp;</span>
           {text.toUpperCase() === endTexts[2].toUpperCase() ? (
-            <a href="https://discord.gg/invite/mehfeel">{text}</a>
+            <a href="https://discord.gg/vzQMa7ZCwq">{text}</a>
           ) : (
             <span>{text}</span>
           )}
